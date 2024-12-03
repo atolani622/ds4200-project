@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-f3adcdb1084774a3302d5d3ce916fa21"}, "mark": {"type": "circle"}, "encoding": {"color": {"field": "genres", "legend": null, "scale": {"domain": ["Action", "Adventure", "Comedy", "Documentary", "Drama", "Fantasy", "Horror", "Romance", "Science Fiction", "Thriller"], "range": ["#4e79a7", "#f28e2b", "#e15759", "#76b7b2", "#59a14f", "#edc948", "#b07aa1", "#ff9da7", "#9c755f", "#bab0ac"]}, "type": "nominal"}, "size": {"field": "count", "legend": null, "title": "Count", "type": "quantitative"}, "tooltip": [{"field": "genres", "type": "nominal"}, {"field": "runtime_range", "type": "ordinal"}, {"field": "count", "type": "quantitative"}], "x": {"field": "genres", "title": "Genre", "type": "nominal"}, "y": {"field": "runtime_range", "title": "Runtime Range", "type": "nominal"}}, "height": 400, "title": "Movie Count by Genre and Runtime Range", "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-f3adcdb1084774a3302d5d3ce916fa21": [{"genres": "Action", "runtime_range": "Short", "count": 127}, {"genres": "Action", "runtime_range": "Medium", "count": 679}, {"genres": "Action", "runtime_range": "Long", "count": 270}, {"genres": "Adventure", "runtime_range": "Short", "count": 125}, {"genres": "Adventure", "runtime_range": "Medium", "count": 462}, {"genres": "Adventure", "runtime_range": "Long", "count": 222}, {"genres": "Comedy", "runtime_range": "Short", "count": 355}, {"genres": "Comedy", "runtime_range": "Medium", "count": 1084}, {"genres": "Comedy", "runtime_range": "Long", "count": 110}, {"genres": "Documentary", "runtime_range": "Short", "count": 61}, {"genres": "Documentary", "runtime_range": "Medium", "count": 58}, {"genres": "Documentary", "runtime_range": "Long", "count": 12}, {"genres": "Drama", "runtime_range": "Short", "count": 219}, {"genres": "Drama", "runtime_range": "Medium", "count": 1309}, {"genres": "Drama", "runtime_range": "Long", "count": 481}, {"genres": "Fantasy", "runtime_range": "Short", "count": 76}, {"genres": "Fantasy", "runtime_range": "Medium", "count": 280}, {"genres": "Fantasy", "runtime_range": "Long", "count": 83}, {"genres": "Horror", "runtime_range": "Short", "count": 200}, {"genres": "Horror", "runtime_range": "Medium", "count": 404}, {"genres": "Horror", "runtime_range": "Long", "count": 33}, {"genres": "Romance", "runtime_range": "Short", "count": 81}, {"genres": "Romance", "runtime_range": "Medium", "count": 508}, {"genres": "Romance", "runtime_range": "Long", "count": 120}, {"genres": "Science Fiction", "runtime_range": "Short", "count": 74}, {"genres": "Science Fiction", "runtime_range": "Medium", "count": 275}, {"genres": "Science Fiction", "runtime_range": "Long", "count": 140}, {"genres": "Thriller", "runtime_range": "Short", "count": 201}, {"genres": "Thriller", "runtime_range": "Medium", "count": 788}, {"genres": "Thriller", "runtime_range": "Long", "count": 189}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
