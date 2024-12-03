@@ -55,7 +55,7 @@ section {
 
 .visualization img {
     max-width: 100%;
-    height: auto;
+    height: 600;
     display: block;
     margin: 0 auto;
 }
