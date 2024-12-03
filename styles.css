@@ -9,10 +9,12 @@ header {
     background: #333;
     color: #fff;
     padding: 10px 20px;
+    text-align: center;
 }
 
 header h1 {
     margin: 0;
+    text-align: center;
 }
 
 header nav ul {
@@ -20,10 +22,13 @@ header nav ul {
     padding: 0;
     display: flex;
     gap: 15px;
+    justify-content: center;    
+    
 }
 
 header nav ul li {
     display: inline;
+
 }
 
 header nav ul li a {
@@ -41,6 +46,7 @@ main {
 
 section {
     margin-bottom: 30px;
+    
 }
 
 .visualization {
