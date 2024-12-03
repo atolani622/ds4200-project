@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science Project</title>
+    <title>Movie Data Analysis - Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,9 +11,9 @@
         <h1>Movie Data Analysis</h1>
         <nav>
             <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#visualizations">Visualizations</a></li>
+                <li><a href="visualizations.html">Visualizations</a></li>
                 <li><a href="#dataset">Dataset</a></li>
+                <li><a href="summary.html">Summary</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -22,53 +22,47 @@
     <main>
         <section id="overview">
             <h2>Overview</h2>
-            <p>This project explores a dataset of movies, analyzing trends in genres, budgets, and IMDb ratings. Interactive visualizations provide insights into the relationship between budget and rating, the distribution of genres, and more.</p>
+            <p>This project delves into a dataset of movies, analyzing genres, budgets, IMDb ratings, and more. By leveraging interactive visualizations, we provide insights into patterns that shape the film industry.</p>
         </section>
 
-        <section id="visualizations">
-            <h2>Visualizations</h2>
-            <div class="visualization">
-                <img src="static_1.png" alt="Bubble Chart">
-                <p><strong>Figure 1:</strong> Budget vs IMDb Rating (Bubble size represents IMDb rating).</p>
-            </div>
-            <div class="visualization">
-                <img src="static_2.png" alt="Genre Distribution">
-                <p><strong>Figure 2:</strong> Distribution of Movie Genres.</p>
-            </div>
-            <div class="visualization">
-                <img src="static_3.png" alt="Genre Distribution">
-                <p><strong>Figure 2:</strong> Distribution of Movie Genres.</p>
-            </div>
-            <div class="visualization">
-                <iframe src="interactive_1.html" width="100%" height="500" style="border:none;"></iframe>
-                <p><strong>Figure 1:</strong> Budget vs IMDb Rating (Interactive Plot).</p>
-            </div>
-            <div class="visualization">
-                <iframe src="interactive_2.html" width="100%" height="500" style="border:none;"></iframe>
-                <p><strong>Figure 1:</strong> Budget vs IMDb Rating (Interactive Plot).</p>
-            </div>
+        <section id="objectives">
+            <h2>Objectives</h2>
+            <ul>
+                <li>Understand budget distribution across genres.</li>
+                <li>Analyze the correlation between budgets and IMDb ratings.</li>
+                <li>Explore the popularity and revenue generation of different genres.</li>
+                <li>Provide interactive tools for deeper insights into the dataset.</li>
+            </ul>
+        </section>
+
+        <section id="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Interactive visualizations with real-time filtering options.</li>
+                <li>Insights into financial trends in the movie industry.</li>
+                <li>Static and interactive plots for comprehensive analysis.</li>
+            </ul>
         </section>
 
         <section id="dataset">
             <h2>Dataset</h2>
-            <p>The dataset used for this project was obtained from <a href="https://www.kaggle.com/" target="_blank">Kaggle</a> and includes over 5,000 movies. Features include title, genre, release year, budget, and IMDb rating.</p>
-            <button onclick="downloadDataset()">Download Dataset</button>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>For questions or collaborations, reach out via <a href="mailto:your.email@example.com">email</a>.</p>
+            <p>The dataset used for this project was obtained from <a href="https://www.kaggle.com/datasets/alanvourch/tmdb-movies-daily-updates" target="_blank">Kaggle</a> and includes over 1 Million movies. Features include title, genre, release year, budget, and IMDb rating.</p>
+            <p>In order to reduce the data to a more manageable amount we did some cleaning</p>
+            <ol>
+                <li>Got only movies in English</li>
+                <li>Sorted by released date after 2003 </li>
+                <li>Got only movies that are released (none that are in production)</li>
+                <li>Removed any movies with a negative budget or revenue</li>
+                <li>Removed any movies iwth a negative imdb rating</li>
+            </ol>
+            <p> Click here to download our cleaned movies dataset!</p>
+            <a href="movies.csv" download="movies.csv">
+                <button>Movies</button>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Data Science Project | Created by Your Name</p>
+        <p>&copy; 2024 Movie Data Analysis Project | Akshay, Patty, and Andy</p>
     </footer>
-
-    <script>
-        function downloadDataset() {
-            alert("Dataset download feature coming soon!");
-        }
-    </script>
 </body>
 </html>
