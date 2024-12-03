@@ -60,7 +60,7 @@ section {
     margin: 0 auto;
 }
 
-footer {
+footer, footer:visited {
     background: #333;
     color: #fff;
     text-align: center;
